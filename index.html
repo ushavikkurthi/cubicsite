@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cubic effect</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+
+  <style type="text/css">
+  	
+*{
+margin:0px;
+padding: 0px;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*header nav*/
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+
+}
+
+section .circle{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #e51e2a;
+	clip-path: circle(70% at right -20%); 
+}
+
+header{
+
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	padding: 40px 100px;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	}
+header .logo{
+	position: relative;
+	max-width: 150px;
+	color: white;
+}
+
+header .navigation{
+	position: relative;
+	display: flex;
+}
+
+header .navigation li{
+	list-style-type: none;
+
+}
+
+header .navigation li a{
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	margin-left: 40px;
+}
+
+.content{
+	position: relative;
+	color: white;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content .text {
+position: relative;}
+
+.text h2{
+	margin-bottom: 15px;
+}
+ 
+.text p{
+max-width: 600px;
+font-size: 15px;
+margin-bottom: 20px;  
+text-align: justify;
+}
+
+button{
+	padding:6px 12px;
+	border-radius: 15px;
+	background-color: cyan;
+
+}
+
+
+.social{
+	position: absolute;
+	bottom: 40px;
+	left: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social li {
+	text-decoration: none;
+	color: white;
+	display: inline-block;}
+
+.social li a i{
+
+	height: 100px;
+	font-size: 30px;
+	color: white;
+	margin-left: 15px;
+	 transition: 0.2s ease-in-out;
+
+}
+
+.social li a i:hover{
+	transform: translateY(-10px);
+}
+
+.swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 180px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+
+
+      .content .imgbox{
+      	max-width: 500px;
+      	display: flex;
+      	justify-content: flex-end;
+      	margin-left: 160px;
+
+      }
+      .content .imgbox img{
+
+      	max-width: 170px;
+      }
+
+      .swiper-slide img{
+      	position: absolute;
+      	bottom: 0;
+      	max-height: 100%;
+      }
+      .swiper-container-3d .swiper-slide-shadow-left,
+      .swiper-container-3d .swiper-slide-shadow-right{
+
+      	background-image: none;}
+@media (max-width: 991px){
+
+	header{
+		padding:40px;
+
+	}
+	section{
+		padding:150px 40px;
+	}
+	.social{
+		left: 40px;
+			}
+ 	.content{
+ 		flex-direction: column;
+ 	}
+ 	.content .text, .content .imgbox{
+ 		max-width: 100%;
+ 	}
+.swiper-slide{
+	height: 200px;
+}
+
+header .navigation{
+	display: none;
+} 
+
+.toggle{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background:url(menu.png);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;cursor: pointer;
+	z-index: 10000;
+	color: white;
+}
+
+.content .imgbox{
+      	
+      	margin-left: 0px;
+
+      }
+}
+
+ </style>
+</head>
+<body>
+	<!-- header navbar -->
+
+<section>
+<div class="circle">
+<header>
+<a href="" class="logo">AARYA INFOTECH</a>
+<div class="toggle active" onClick="toggleMenu()"></div>
+<ul class="navigation">
+	<li><a href="#">HOME</a></li>
+	<li><a href="#">ABOUT</a></li>
+	<li><a href="#">BLOG</a></li>
+	<li><a href="#">CONTACT</a></li>
+</ul>
+</header>
+
+
+</div>
+
+<div class="content">
+<div class="text">
+	<h2>AARYA INFOTECH</h2>
+	<P>Our vertical solutions expertise allows your business to streamline workflow, and increase productivity Our vertical solutions expertise allows your business to streamline workflow, and increase productivity Our vertical solutions expertise allows your business to streamline workflow, and increase productivity.</P>
+	<button>SEE MORE</button>
+
+
+</div>
+
+<div class="imgbox">
+	
+	<div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/Services-1.png"  />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-2.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-3.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-4.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-2.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-3.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Services-4.png" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+</div>
+
+
+<ul class="social">
+	<li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+	<li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+	<li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+
+</ul>
+
+
+
+
+</section>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop:true,
+      });
+
+      function toggleMenu(){
+      	const menuToggle = document.querySelector('.toggle');
+      	menuToggle.classList.toggle('active')
+      }
+    </script>
+
+
+</body>
+</html>
